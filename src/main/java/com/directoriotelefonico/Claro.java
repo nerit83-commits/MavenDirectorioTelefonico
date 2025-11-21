@@ -6,7 +6,14 @@ public class Claro {
     private double[] gananciamensual;
     
 
-    // Constructor
+    //Para realizar los test necesito un constructor vacío.
+    public Claro() {
+        this.cliente = new ArrayList<>();
+        this.gananciamensual = new double[0];
+    }
+
+
+    // Constructor con parametros
     public Claro(ArrayList<Cliente> cliente, double[]gananciamensual){
         this.cliente = cliente;
         this.gananciamensual = gananciamensual;
@@ -14,7 +21,7 @@ public class Claro {
 
     // Setters y getters
     public void SetCliente (ArrayList<Cliente> cliente){
-        cliente = cliente;
+        this.cliente = cliente; //agregue this.
     }
     public ArrayList<Cliente> GetCliente(){
         return cliente;
